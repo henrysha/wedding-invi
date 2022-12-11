@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:wght@400;700&family=Mulish:wght@600;700&family=Poppins:wght@200;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fill-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* iOS only */
+@supports (-webkit-touch-callout: none) {
+  .fill-screen {
+    height: -webkit-fill-available;
+  }
+}
