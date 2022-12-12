@@ -7,24 +7,24 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
-    // "plugin:import/recommended",
-    // "plugin:import/typescript",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "prettier"
   ],
   "rules": {
-    "@typescript-eslint/consistent-type-imports": "warn"
-    // "import/order": [
-    //   "error",
-    //   {
-    //     "groups": [
-    //       "builtin",
-    //       "external",
-    //       "internal",
-    //       "parent",
-    //       "sibling",
-    //       "index"
-    //     ]
-    //   }
-    // ]
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ]
   }
 }
