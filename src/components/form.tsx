@@ -40,7 +40,7 @@ const Form = () => {
         <label htmlFor="number" className="font-bold">
           동반 인원 수
         </label>
-        <div>
+        <div className="text-right">
           <input
             type="number"
             required
