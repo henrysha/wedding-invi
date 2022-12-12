@@ -1,11 +1,12 @@
+import type { CreatePageParameters } from '@notionhq/client/build/src/api-endpoints'
+
+import { notionClient } from '@/server/notion'
 import { publicProcedure, router } from '@/server/trpc/trpc'
 
 import { validateInput } from '@/types/attendance'
+import { PropertyType } from '@/types/enum'
 
 import { env } from '@/env/server.mjs'
-import { notionClient } from '@/server/notion'
-import { PropertyType } from '@/types/enum'
-import type { CreatePageParameters } from '@notionhq/client/build/src/api-endpoints'
 
 export const attendanceRouter = router({
   submit: publicProcedure
