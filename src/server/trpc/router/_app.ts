@@ -1,5 +1,5 @@
-import { router } from "../trpc";
-import { attendanceRouter } from "./attendance";
+import { attendanceRouter } from "@/server/trpc/router/attendance";
+import { router } from "@/server/trpc/trpc";
 
 export const appRouter = router({
   attendance: attendanceRouter,

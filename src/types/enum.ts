@@ -1,3 +1,59 @@
-import { z } from "zod";
+import { z } from 'zod'
 
-export const Attendance = z.enum(["참석 예정", "참석만 식사는 X", "불참"]);
+export const Attendance = z.enum(['참석 예정', '참석만 식사는 X', '불참'])
+
+export const PropertyType = z.enum([
+  'title',
+  'rich_text',
+  'number',
+  'select',
+  'multi_select',
+  'date',
+  'people',
+  'files',
+  'checkbox',
+  'url',
+  'email',
+  'phone_number',
+  'formula',
+  'relation',
+  'rollup',
+  'created_time',
+  'created_by',
+  'last_edited_time',
+  'last_edited_by',
+  'status',
+])
+
+export const BlockType = z.enum([
+  'paragraph',
+  'heading_1',
+  'heading_2',
+  'heading_3',
+  'bulleted_list_item',
+  'numbered_list_item',
+  'to_do',
+  'toggle',
+  'child_page',
+  'child_database',
+  'embed',
+  'image',
+  'video',
+  'file',
+  'pdf',
+  'bookmark',
+  'callout',
+  'quote',
+  'equation',
+  'divider',
+  'table_of_contents',
+  'column',
+  'column_list',
+  'link_preview',
+  'synced_block',
+  'template',
+  'link_to_page',
+  'table',
+  'table_row',
+  'unsupported',
+])
