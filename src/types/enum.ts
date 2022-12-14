@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
 export const Attendance = z.enum(['참석 예정', '참석만 식사는 X', '불참'])
+export const BrideOrGroom = z.enum(['신랑', '신부'])
 
 export const PropertyType = z.enum([
   'title',

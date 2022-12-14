@@ -4,14 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#__next {
+  height: 100%;
+}
+
 .fill-screen {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.fill-with-bottom-margin {
+  width: 100vw;
+  height: calc(100% - 4em);
 }
 
 /* iOS only */
 @supports (-webkit-touch-callout: none) {
   .fill-screen {
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
   }
 }

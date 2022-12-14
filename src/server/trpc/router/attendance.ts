@@ -11,7 +11,7 @@ import { env } from '@/env/server.mjs'
 export const attendanceRouter = router({
   submit: publicProcedure
     .input(validateInput)
-    .mutation(({ input: { name, number, attendance } }) => {
+    .mutation(({ input: { name, number, attendance, side } }) => {
       const body: CreatePageParameters = {
         parent: {
           type: 'database_id' as const,
@@ -31,6 +31,12 @@ export const attendanceRouter = router({
           인원: {
             type: PropertyType.Enum.number,
             number,
+          },
+          분류: {
+            type: PropertyType.Enum.select,
+            select: {
+              name: side,
+            },
           },
           '참석 여부': {
             type: PropertyType.Enum.select,

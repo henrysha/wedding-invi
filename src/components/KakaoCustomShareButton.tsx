@@ -21,9 +21,10 @@ export const KakaoCustomShareButton = () => {
         <Image
           src="/kakaotalk_sharing_btn_medium.png"
           alt="카카오톡 공유하기"
-          width={150}
-          height={150}
+          width={100}
+          height={100}
         />
+        카카오톡으로 공유하기
       </a>
       <Script
         src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"

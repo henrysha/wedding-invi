@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 
 import { validateInput } from '@/types/attendance'
-import { Attendance } from '@/types/enum'
+import { Attendance, BrideOrGroom } from '@/types/enum'
 import { trpc } from '@/utils/trpc'
 
 const Form = () => {
@@ -15,6 +15,15 @@ const Form = () => {
     } else alert(validation.error)
   })
 
+  if (mutation.isLoading) {
+    return (
+      <div>
+        <h2 className="text-4xl">제출중입니다....</h2>
+        <h3 className="text-3xl">잠시만 기다려주세요</h3>
+      </div>
+    )
+  }
+
   if (mutation.isSuccess) {
     return (
       <div>
@@ -24,7 +33,7 @@ const Form = () => {
   }
 
   return (
-    <form className="grid gap-8" onSubmit={onSubmit}>
+    <form className="grid gap-4 xs:gap-8" onSubmit={onSubmit}>
       <div>
         <label htmlFor="name" className="font-bold">
           이름
@@ -50,6 +59,33 @@ const Form = () => {
           <span>명</span>
         </div>
       </div>
+      <div>
+        <h2 className="font-bold">누구 지인이신가요?</h2>
+        <div className="grid grid-cols-2 gap-2">
+          <div>
+            <input
+              type="radio"
+              id="groom"
+              value={BrideOrGroom.Enum.신랑}
+              {...register('side')}
+            />
+            <label htmlFor="groom" className="pl-3">
+              신랑 측
+            </label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="bride"
+              value={BrideOrGroom.Enum.신부}
+              {...register('side')}
+            />
+            <label htmlFor="bride" className="pl-3">
+              신부 측
+            </label>
+          </div>
+        </div>
+      </div>
       <div className="grid gap-4 leading-loose">
         <h2 className="font-bold">식사 및 참석 여부</h2>
         <div>
@@ -57,7 +93,6 @@ const Form = () => {
             type="radio"
             id="attendance1"
             value={Attendance.Enum['참석 예정']}
-            checked
             {...register('attendance')}
           />
           <label htmlFor="attendance1" className="pl-3">
@@ -87,7 +122,7 @@ const Form = () => {
           </label>
         </div>
       </div>
-      <button className="w-full rounded-lg bg-blue-600 p-3 text-white">
+      <button className="mb-4 w-full rounded-lg bg-blue-600 p-3 text-white">
         참석 여부 제출
       </button>
     </form>

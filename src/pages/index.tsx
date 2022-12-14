@@ -1,18 +1,19 @@
-import Form from '@/components/form'
+import Link from 'next/link'
+import { useRef } from 'react'
 
-export default function Page() {
+export default function InviPage() {
   return (
-    <main className="fill-screen auto-rows grid grid-cols-1 grid-rows-2-5 gap-16 bg-rose-200 font-serif text-amber-900 max-xs:gap-5">
-      <header className="self-end">
-        <h1 className="text-4xl leading-relaxed max-xs:text-3xl">
-          식사 및 참석여부를
-          <br />
-          알려주세요
-        </h1>
-      </header>
-      <section className="px-5 leading-loose">
-        <Form />
-      </section>
-    </main>
+    <div className="h-full">
+      <iframe
+        className="fill-with-bottom-margin"
+        src="https://bojagicard.com/sarah9411"
+      ></iframe>
+      <Link
+        href="/attendance"
+        className="text-bold flex h-16 w-screen place-items-center justify-center bg-fuchsia-300 text-xl text-white"
+      >
+        참석 여부 전달하기
+      </Link>
+    </div>
   )
 }
