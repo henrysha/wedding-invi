@@ -1,5 +1,7 @@
 {
   "name": "wedding-invi",
+  "author": "Seong Wook Ha <seongwook.ha@navercorp.com>",
+  "description": "mobile wedding invitation wrapper to add attendance feature with notion api",
   "version": "0.1.0",
   "private": true,
   "scripts": {
