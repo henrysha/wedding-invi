@@ -86,7 +86,7 @@ const Form = () => {
           </div>
         </div>
       </div>
-      <div className="grid gap-4 leading-loose">
+      <div className="grid gap-4 leading-loose max-xs:gap-1">
         <h2 className="font-bold">식사 및 참석 여부</h2>
         <div>
           <input
@@ -122,7 +122,7 @@ const Form = () => {
           </label>
         </div>
       </div>
-      <button className="mb-4 w-full rounded-lg bg-blue-600 p-3 text-white">
+      <button className="mb-2 w-full rounded-lg bg-blue-600 p-3 text-white max-xs:p-1">
         참석 여부 제출
       </button>
     </form>
