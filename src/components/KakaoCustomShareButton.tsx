@@ -1,6 +1,6 @@
 import Script from 'next/script'
+import { RiKakaoTalkFill } from 'react-icons/ri'
 
-import Image from 'next/image'
 import { env } from '@/env/client.mjs'
 
 export const KakaoCustomShareButton = () => {
@@ -18,12 +18,7 @@ export const KakaoCustomShareButton = () => {
   return (
     <>
       <a id="kakaotalk-sharing-btn">
-        <Image
-          src="/kakaotalk_sharing_btn_medium.png"
-          alt="카카오톡 공유하기"
-          width={34}
-          height={34}
-        />
+        <RiKakaoTalkFill className="text-5xl text-yellow-400" />
       </a>
       <Script
         src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"
