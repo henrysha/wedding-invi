@@ -47,7 +47,7 @@ const Form = () => {
       </div>
       <div className="grid grid-cols-2">
         <label htmlFor="number" className="font-bold">
-          동반 인원 수
+          동반 인원 수 (본인 포함)
         </label>
         <div className="text-right">
           <input
