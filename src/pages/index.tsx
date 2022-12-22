@@ -1,14 +1,9 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { KakaoCustomShareButton } from '@/components/KakaoCustomShareButton'
 import { env } from '@/env/client.mjs'
 
 export default function InviPage() {
   return (
-    <>
-      <Head>
-        <title>모바일 청첩장</title>
-      </Head>
       <div className="h-full">
         <iframe
           className="fill-with-bottom-margin"
@@ -24,6 +19,5 @@ export default function InviPage() {
           <KakaoCustomShareButton />
         </div>
       </div>
-    </>
   )
 }
