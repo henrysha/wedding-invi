@@ -114,7 +114,7 @@ const Form = () => {
           <input
             type="radio"
             id="attendance3"
-            value={Attendance.Enum['참석만 식사는 X']}
+            value={Attendance.Enum['불참']}
             {...register('attendance')}
           />
           <label htmlFor="attendance3" className="pl-3">
